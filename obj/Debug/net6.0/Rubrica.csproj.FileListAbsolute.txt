@@ -1,0 +1,14 @@
+C:\Users\15mim\source\repos\Rubrica\bin\Debug\net6.0\Rubrica.exe
+C:\Users\15mim\source\repos\Rubrica\bin\Debug\net6.0\Rubrica.deps.json
+C:\Users\15mim\source\repos\Rubrica\bin\Debug\net6.0\Rubrica.runtimeconfig.json
+C:\Users\15mim\source\repos\Rubrica\bin\Debug\net6.0\Rubrica.dll
+C:\Users\15mim\source\repos\Rubrica\bin\Debug\net6.0\Rubrica.pdb
+C:\Users\15mim\source\repos\Rubrica\obj\Debug\net6.0\Rubrica.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\15mim\source\repos\Rubrica\obj\Debug\net6.0\Rubrica.AssemblyInfoInputs.cache
+C:\Users\15mim\source\repos\Rubrica\obj\Debug\net6.0\Rubrica.AssemblyInfo.cs
+C:\Users\15mim\source\repos\Rubrica\obj\Debug\net6.0\Rubrica.csproj.CoreCompileInputs.cache
+C:\Users\15mim\source\repos\Rubrica\obj\Debug\net6.0\Rubrica.dll
+C:\Users\15mim\source\repos\Rubrica\obj\Debug\net6.0\refint\Rubrica.dll
+C:\Users\15mim\source\repos\Rubrica\obj\Debug\net6.0\Rubrica.pdb
+C:\Users\15mim\source\repos\Rubrica\obj\Debug\net6.0\Rubrica.genruntimeconfig.cache
+C:\Users\15mim\source\repos\Rubrica\obj\Debug\net6.0\ref\Rubrica.dll
