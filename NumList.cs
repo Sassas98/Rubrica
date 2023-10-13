@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 
 namespace Rubrica {
@@ -11,9 +12,10 @@ namespace Rubrica {
 
         private List<string> list;
 
-        //Questa funzione controlla la dimensione e il contenuto dei numeri
-        Func<string, bool> isNum = s => s.Length == 10
-         && s.Where(c => c >= '0' && c <= '9').Count() == 10;
+        //Queste funzioni controllano la dimensione e il contenuto delle stringhe
+        private Func<string, bool> isNum = s => Regex.IsMatch(s, @"^\d{10}$");
+
+        private Func<string, bool> isMail = s => Regex.IsMatch(s, @"^[^@\s]+@[^@\s]+\.[^@\s]+$");
 
 
         public NumList() {
@@ -30,7 +32,7 @@ namespace Rubrica {
 
         //aggiunge un numero solo e solo se è coerente e non presente
         public bool AddNumber(string s) {
-            if (isNum(s) && !list.Contains(s)) {
+            if ((isNum(s) || isMail(s)) && !list.Contains(s)) {
                 list.Add(s);
                 return true;
             }
@@ -69,7 +71,7 @@ namespace Rubrica {
             return n < list.Count ? list[n] : "null";
         }
 
-        public string GetAllNumbers() {
+        public override string ToString() {
             return list.Count > 0 ? list.Aggregate((a, b) => a + "\n" + b) : "";
         }
     }

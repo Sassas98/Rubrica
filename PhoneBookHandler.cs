@@ -44,14 +44,16 @@ namespace Rubrica {
 
         //applica l'azione search
         private string SearchNumbers(List<string> items) {
-            string s = db.Search(items.Count == 1 ? items[0] : FromListToString(items));
-            return s.Equals("") ? "Non è stato trovato nulla." : s;
+            return EvaluateResult(db.Search(items.Count == 1 ? items[0] : FromListToString(items)));
         }
 
         //applica l'azione all
         private string AllNumbers() {
-            string s = db.GetAllNumbers();
-            return s.Equals("") ? "Non è stato trovato nulla." : s;
+            return EvaluateResult(db.GetAllNumbers());
+        }
+
+        private string EvaluateResult(List<string> items) {
+            return items.Count == 0 ? "Non è stato trovato nulla." : items.Aggregate((a, b) => a + "\n\n" + b);
         }
 
         //applica l'azione delete

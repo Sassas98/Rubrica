@@ -35,15 +35,14 @@ namespace Rubrica {
         }
 
         //controlla se una stringa è presente nei nomi o nei numeri dei contatti
-        public string Search(string n) {
-            var l = db.Where(v => v.Key.ToUpper().Contains(n.ToUpper()) ||
+        public List<string> Search(string n) {
+            return db.Where(v => v.Key.ToUpper().Contains(n.ToUpper()) ||
             v.Value.GetNumList().Where(s => s.Contains(n)).Count() > 0)
-            .Select(v => v.Key + "\n" + v.Value.GetAllNumbers());
-            return l.Count() > 0 ? l.Aggregate((a, b) => a + "\n\n" + b) : "";
+            .Select(v => v.Key + "\n" + v.Value).ToList();
         }
 
         //restituisce l'intera rubrica
-        public string GetAllNumbers() {
+        public List<string> GetAllNumbers() {
             return Search("");
         }
 
